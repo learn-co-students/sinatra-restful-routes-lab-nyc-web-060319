@@ -1,5 +1,5 @@
-<form action="/recipes/", method="patch">
-<%=@recipe_name_input%> (name): <input type="text" name="recipe_name"> <br>
+<form action=<%="/recipes/#{@recipe.id}"%> method="patch" name="_method">
+<%=@recipe_name_input%> (name): <input type="text" name="name"> <br>
 <%=@ingredients_input%> (ingredients): <input type="text" name="ingredients"> <br>
 <%=@cook_time_input%>(cook time): <input type="text" name="cook_time"> <br>
 <input type="submit" value="submit">
