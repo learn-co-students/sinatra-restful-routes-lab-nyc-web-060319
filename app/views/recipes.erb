@@ -1,3 +1,3 @@
 <%@recipe.each do |recipe|%>
-<li>Recipe: <%=recipe.name%>, Ingredients: <%=recipe.ingredients%>, Cook time: <%= recipe.cook_time%></li>
+<li><a href=<%="/recipes/#{recipe.id}"%>> Recipe: <%=recipe.name%>, Ingredients: <%=recipe.ingredients%>, Cook time: <%= recipe.cook_time%></a></li>
 <%end%>

@@ -19,6 +19,12 @@ class ApplicationController < Sinatra::Base
     erb :recipes
   end
 
+
+
+  # patch '/recipes' do
+
+  # end
+
   get '/recipes/new' do
     erb :new
   end
@@ -27,6 +33,15 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find_by_id(params[:id])
     erb :single_recipe
   end
+
+  get '/recipes/:id/edit' do
+    @recipe = Recipe.find_by_id(params[:id])
+    @recipe_name_input = @recipe.name
+    @ingredients_input = @recipe.ingredients
+    @cook_time_input = @recipe.cook_time
+    erb :edit
+  end
+
 
   delete '/recipes/:id' do
     if Recipe.count == 0
