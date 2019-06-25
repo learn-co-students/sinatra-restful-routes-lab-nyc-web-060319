@@ -19,7 +19,9 @@ class ApplicationController < Sinatra::Base
     @name = params[:name]
     @ingredients = params[:ingredients]
     @cook_time = params[:cook_time]
-    Recipe.create(name: @name, ingredients: @ingredients, cook_time: @cook_time)
+    Recipe.create!(name: @name, ingredients: @ingredients, cook_time: @cook_time)
+    
+    binding.pry
     redirect "/recipes/#{Recipe.last.id}"
   end
 
@@ -28,7 +30,7 @@ class ApplicationController < Sinatra::Base
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
-    # binding.pry
+    binding.pry
     @recipe.save
     erb :single_recipe
   end
