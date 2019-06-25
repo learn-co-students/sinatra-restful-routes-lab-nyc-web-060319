@@ -1,0 +1,1 @@
+Recipe.create(name: "fart sauce", ingredients: "farts, love", cook_time: "30 seconds")
