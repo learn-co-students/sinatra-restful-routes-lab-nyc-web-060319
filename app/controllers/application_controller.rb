@@ -28,6 +28,9 @@ class ApplicationController < Sinatra::Base
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
+    # binding.pry
+    @recipe.save
+    erb :single_recipe
   end
 
   get '/recipes/new' do
@@ -49,11 +52,13 @@ class ApplicationController < Sinatra::Base
 
 
   delete '/recipes/:id' do
+    # binding.pry
     if Recipe.count == 0
       redirect '/recipes'
     else
-      @recipe_to_delete = Recipe.find_by_id(params[:id])
-      @recipe_to_delete.destroy
+      # @recipe_to_delete = Recipe.find_by_id(params[:id])
+      Recipe.destroy(params[:id])
+      # binding.pry
       redirect '/recipes'
     end
   end
