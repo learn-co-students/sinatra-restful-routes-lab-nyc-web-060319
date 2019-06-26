@@ -14,7 +14,7 @@ did!), we're going to be building a web app to store those recipes for you!
     a `name`, `ingredients` (which can be written as one string containing all the
     ingredients), and `cook_time`.
 
-2.  Make sure you have a corresponding model for your recipes.
+2.  Make sure you have a corresponding model for your recipes. -->
 
 3.  In the `application_controller.rb`, set up a controller action that will
     render a form to create a new recipe. This controller action should create and
@@ -27,8 +27,8 @@ did!), we're going to be building a web app to store those recipes for you!
     to edit a single recipe. This controller action should update the entry in the
     database with the changes, and then redirect to the recipe show page
 
-6.  Create a controller action (index action) that displays all the recipes in
-    the database.
+<!-- <!-- 6.  Create a controller action (index action) that displays all the recipes in
+    the database. -->
 
 7.  Add to the recipe show page a form that allows a user to delete a recipe.
     This form should submit to a controller action that deletes the entry from the
